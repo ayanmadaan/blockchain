@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --first-color: #e36115;
+  --text-color: white;
+  --dark-color: rgb(21, 8, 7);
+  --light-color: white;
+
+  --body-font: "Poppins", sans-serif;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-left: 8rem;
+}
+
+.card {
+  width: 280px;
+  height: 345px;
+  background-color: var(--dark-color);
+  border-radius: 1rem;
+  color: white;
+  /* overflow-y: hidden; */
+  -webkit-transform: scale(1);
+  -webkit-transition: 0.5s ease-out;
+  color: white;
+}
+
+/* .pricing__container-card:nth-child(2) {
+    transform: scale(1.05);
+    background: #242424;
+  } */
+
+.card-img {
+  margin-top: -2rem;
+  margin-left: 3.4rem;
+  width: 175px;
+  height: 200px;
+  margin-right: 150px;
+  padding-top: 2rem;
+  padding-bottom: -2rem;
+  filter: drop-shadow(5px 10px 15px rgba(8, 9, 13, 0.4));
+}
+
+.card-content {
+  transform: translateY(4rem);
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  color: rgba(226, 74, 213, 0.904);
+  /* margin-bottom: 0.5rem; */
+  margin-top: 0;
+}
+
+.type {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  margin-top: -20px;
+}
+
+.info {
+  font-size: var(--small-font-size);
+  text-align: initial;
+  margin-bottom: 30px;
+  opacity: 0;
+}
+
+.btnn {
+  width: max-content;
+  padding: 1rem 1.5rem;
+  background-color: rgba(226, 74, 213, 0.904);
+  border-radius: 1rem;
+  font-weight: 600;
+  transition: 0.2s;
+  opacity: 0;
+}
+
+.btnn:hover {
+  box-shadow: 0 18px 40px -12px rgba(242, 162, 12, 0.35);
+}
+
+.card-img,
+.card-content,
+.title,
+.type,
+.info {
+  transition: 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.3);
+  transition: 0.5s ease-out;
+  color: white;
+}
+
+.card:hover .card-img {
+  transform: translate(-1.5rem, -3.5rem) rotate(-21deg);
+}
+
+.card:hover .card-content {
+  transform: translateY(1.5rem);
+}
+
+.card:hover .info {
+  transform: translateX(2.5rem);
+}
+
+.card:hover .title {
+  font-size: 20px;
+  transform: translateX(-4.8rem);
+  margin-bottom: 0;
+}
+
+.card:hover .type {
+  transform: translateX(-4.5rem);
+}
+
+.card:hover .info,
+.card:hover .btnn {
+  transition-delay: 0.2s;
+  opacity: 1.2;
+}
